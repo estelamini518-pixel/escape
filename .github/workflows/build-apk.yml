@@ -1,13 +1,14 @@
 name: Build Android APK
 
-'on':
+on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 
 jobs:
-   build:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,4 +34,3 @@ jobs:
         with:
           name: Escape-del-Laboratorio-APK
           path: build/app/outputs/flutter-apk/app-release.apk
-
